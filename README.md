@@ -32,12 +32,7 @@ This project utilizes a range of technologies to cover database analytics, machi
     -   **Pandas & NumPy:** For efficient data manipulation, cleaning, and preparation.
     -   **Scikit-learn:** For implementing machine learning models, including `IsolationForest`, `RandomForestClassifier`, and `DBSCAN`.
     -   **NetworkX:** For building, analyzing, and visualizing the transaction graph to detect fraud networks.
-
--   **Development Environment:**
-    -   **Jupyter Notebooks / VS Code:** For interactive development, analysis, and code authoring.
-
 ---
-
 ## 4. Part 1: The SQL Analytics Engine
 
 This component is designed to live inside the database and power live dashboards for business users.
