@@ -1,8 +1,4 @@
--- =====================================
--- PHONEPE MARKET LEADERSHIP ANALYTICS
--- =====================================
 
--- 1. PhonePe Market Share vs Competitors (Real-time)
 CREATE VIEW phonepe_market_position AS
 WITH monthly_volumes AS (
     SELECT 
@@ -59,10 +55,6 @@ SELECT
     END as fraud_rate_grade
 FROM phonepe_transactions
 WHERE timestamp >= CURDATE() - INTERVAL 30 DAY;
-
--- =====================================
--- ADVANCED FRAUD DETECTION QUERIES
--- =====================================
 
 -- 3. Real-time Fraud Risk Scoring
 CREATE VIEW realtime_fraud_monitor AS
@@ -161,10 +153,6 @@ WHERE timestamp >= CURDATE() - INTERVAL 30 DAY
 GROUP BY device_type
 ORDER BY device_fraud_rate DESC, avg_transactions_per_device DESC;
 
--- =====================================
--- MERCHANT INTELLIGENCE & ANALYTICS
--- =====================================
-
 -- 6. Merchant Performance Dashboard
 CREATE VIEW merchant_intelligence AS
 WITH merchant_metrics AS (
@@ -241,10 +229,6 @@ churn_indicators AS (
 SELECT * FROM churn_indicators
 WHERE churn_risk_level IN ('CHURNED', 'HIGH_CHURN_RISK', 'MEDIUM_CHURN_RISK')
 ORDER BY month_over_month_change;
-
--- =====================================
--- USER BEHAVIOR & SEGMENTATION
--- =====================================
 
 -- 8. Advanced User Segmentation
 CREATE VIEW phonepe_user_segments AS
